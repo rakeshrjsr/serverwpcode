@@ -7,9 +7,12 @@
             textarea.value ="some value"
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'classic_sci_fi_movies.json', true);
+            console.log("opened")
             xhr.onreadystatechange = function(event){
+                if( xhr.readyState == 4 && xhr.status == 200){
                 textarea.value="Working on it"
                 console.log("statechange")
+                }
             }
             console.log("sending")
             xhr.send()
