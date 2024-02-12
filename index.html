@@ -1,0 +1,16 @@
+<html>
+    <body>
+        Hello!
+        <textarea id="myTextArea" rows="4" cols="40"></textarea>
+        <script>window.onload = function(){
+            textarea = document.getElementById("myTextArea");
+            textarea.value ="some value"
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'classic_sci_fi_movies.json', true);
+            xhr.onreadystatechange = function(event){
+                textarea.value="Working on it"
+            }
+            xhr.send()
+        }</script>
+    </body>
+</html>
