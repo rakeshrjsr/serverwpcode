@@ -9,7 +9,9 @@
             xhr.open('GET', 'classic_sci_fi_movies.json', true);
             xhr.onreadystatechange = function(event){
                 textarea.value="Working on it"
+                console.log("statechange")
             }
+            console.log("sending")
             xhr.send()
         }</script>
     </body>
